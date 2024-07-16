@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from django.coontrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login
 from .forms import LoginForm
 
 def user_login(request):
