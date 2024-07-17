@@ -14,7 +14,7 @@
         <a href="{% url 'dashboard' %}">Моя панель</a>
         </li>
         <li {% if section == "images" %}class="selected"{% endif %}>
-        <a href="#">Картинка</a>
+        <a href="#">Картинки</a>
         </li>
         <li {% if section == "people" %}class="selected"{% endif %}>
         <a href="#">Люди</a>
@@ -23,10 +23,10 @@
     {% endif %}
     <span class="user">
         {% if request.user.is_authenticated %}
-        Привет {{ request.user.first_name|default:request.user.username}},
-        <a href="{% url 'logout' %}">Выход</a>
+        Привет {{ request.user.first_name|default:request.user.username }},
+        <a href="{% url "logout" %}">Выход</a>
         {% else %}
-        <a href="{% url 'login' %}">Вход</a>
+        <a href="{% url "login" %}">Вход</a>
         {% endif %}
     </span>
 </div>
